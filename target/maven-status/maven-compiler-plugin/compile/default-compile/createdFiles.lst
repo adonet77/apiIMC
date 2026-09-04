@@ -1,0 +1,5 @@
+com\mycompany\apiimc\resources\JavaEE8Resource.class
+com\mycompany\apiimc\JAXRSConfiguration.class
+controlador\Error404Servlet.class
+controlador\ImcServlet.class
+modelo\DatosImc.class
