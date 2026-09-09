@@ -2,6 +2,7 @@ package controlador;
 
 import com.google.gson.Gson;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -150,5 +151,55 @@ public class ImcServlet extends HttpServlet {
         response.getWriter().println(
                 "Clasificación: " + clasificacion
         );
+    }
+      // Método que atiende las peticiones HTTP GET
+@Override
+protected void doGet(
+        HttpServletRequest request,
+        HttpServletResponse response)
+        throws ServletException, IOException {
+
+    // Indicar que la respuesta será de tipo JSON
+    response.setContentType("application/json");
+
+    // Establecer la codificación de caracteres
+    response.setCharacterEncoding("UTF-8");
+
+    // Crear el objeto que permitirá enviar la respuesta
+    PrintWriter out = response.getWriter();
+
+    // Enviar un mensaje en formato JSON
+    out.print("{\"mensaje\":\"GET todavía no implementado\"}");
+
+    // Vaciar el contenido de salida
+    out.flush();
+}
+@Override
+protected void doPut(
+        HttpServletRequest request,
+        HttpServletResponse response)
+        throws ServletException, IOException {
+
+    // Indicar que la respuesta será de tipo JSON
+    response.setContentType("application/json");
+
+    // Establecer la codificación de caracteres
+    response.setCharacterEncoding("UTF-8");
+
+    // Crear el objeto que permitirá enviar la respuesta
+    PrintWriter out = response.getWriter();
+
+    // Enviar un mensaje en formato JSON
+    out.print("{\"mensaje\":\"PUT todavía no implementado\"}");
+
+    // Vaciar el contenido de salida
+    out.flush();
+}
+        /**
+     * Retorna una descripción del Servlet.
+     */
+    @Override
+    public String getServletInfo() {
+        return "Controlador de usuarios";
     }
 }
